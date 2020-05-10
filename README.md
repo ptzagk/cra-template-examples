@@ -4,7 +4,7 @@
 
 ![](https://github.com/react-boilerplate/cra-template-examples/workflows/examples/badge.svg)
 
-This repository contains example **scenarious** and **implementations** for **`commonly used`** and needed web application patterns. All the examples are built on top the [react-boilerplate-cra-template]. The goal is to to guide the users and provide samples on how to implement basic stuff that is frequently needed when creating a web application
+This repository contains example **scenarios** and **implementations** for **`commonly used`** and needed web application patterns. All the examples are built on top the [react-boilerplate-cra-template]. The goal is to to guide the users and provide samples on how to implement basic stuff that is frequently needed when creating a web application
 
 ### List of current examples:
 
