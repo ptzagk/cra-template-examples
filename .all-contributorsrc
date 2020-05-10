@@ -1,0 +1,28 @@
+{
+  "projectName": "cra-template-examples",
+  "projectOwner": "react-boilerplate",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 80,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "Can-Sahin",
+      "name": "Can Sahin",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/33245689",
+      "profile": "https://github.com/Can-Sahin",
+      "contributions": [
+        "code",
+        "doc",
+        "ideas",
+        "review",
+        "test"
+      ]
+    }
+  ],
+  "contributorsPerLine": 8,
+  "commitConvention": "none"
+}
