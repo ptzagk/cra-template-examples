@@ -1,6 +1,8 @@
 import shell from 'shelljs';
 import chalk from 'chalk';
 import { folderExists } from './utils';
+import replace from 'replace-in-file';
+import fs from 'fs';
 
 export function createExampleApp(name: string) {
   const folderName = `example_${name}`;
@@ -11,9 +13,30 @@ export function createExampleApp(name: string) {
   });
   shell.exec(`cd ${folderName} && npm run cleanExampleApp`, { fatal: true });
   shell.cp('-f', './.scripts/templates/README.md', `${folderName}/README.md`);
+
+  fixHuskyBug();
+
   console.info(
     chalk.green(`You can go into your folder and code your example now 💪`),
   );
+}
+
+function fixHuskyBug() {
+  // husky changes directory to the example folder which we don't want
+  const huskyLocalPath = '.git/hooks/husky.local.sh';
+  if (!fs.existsSync(huskyLocalPath)) {
+    return;
+  }
+  const options = {
+    files: '.git/hooks/husky.local.sh',
+    from: /cd.*/g,
+    to: `cd "."`,
+  };
+  try {
+    replace.sync(options);
+  } catch (error) {
+    console.error('Error occurred:', error);
+  }
 }
 
 const name = process.argv[2] || '';

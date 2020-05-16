@@ -16,6 +16,8 @@ export function checkAllExamples() {
 }
 
 function checkExampleApp(name: string) {
+  shell.exec(`cd ${name} && npm ci`, { silent: true, fatal: true });
+
   let result = shell.exec(`cd ${name} && npm run lint`, { silent: true });
   if (result.code > 0) {
     console.error(chalk.red(`Linting failed for example: ${name}`));
