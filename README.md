@@ -42,8 +42,6 @@ npm run check-examples
 
 **7 -** You are now ready for a pull request 🥳
 
-[react-boilerplate-cra-template]: https://github.com/react-boilerplate/react-boilerplate-cra-template
-
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
@@ -66,3 +64,5 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 
 This project is licensed under the MIT license, Copyright (c) 2019 Can Sahin.
 For more information see `LICENSE.md`.
+
+[react-boilerplate-cra-template]: https://github.com/react-boilerplate/react-boilerplate-cra-template

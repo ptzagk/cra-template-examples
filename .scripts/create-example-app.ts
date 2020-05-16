@@ -3,13 +3,14 @@ import chalk from 'chalk';
 import { folderExists } from './utils';
 
 export function createExampleApp(name: string) {
-  console.info(chalk.green(`Creating '${name}'...`));
-  shell.exec(`create-react-app --template cra-template-rb ${name}`, {
+  const folderName = `example_${name}`;
+  console.info(chalk.green(`Creating '${folderName}'...`));
+  shell.exec(`create-react-app --template cra-template-rb ${folderName}`, {
     silent: false,
     fatal: true,
   });
-  shell.exec(`cd ${name} && npm run cleanExampleApp`, { fatal: true });
-  shell.cp('-f', './.scripts/templates/README.md', `${name}/README.md`);
+  shell.exec(`cd ${folderName} && npm run cleanExampleApp`, { fatal: true });
+  shell.cp('-f', './.scripts/templates/README.md', `${folderName}/README.md`);
   console.info(
     chalk.green(`You can go into your folder and code your example now 💪`),
   );
